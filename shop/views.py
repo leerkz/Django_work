@@ -34,3 +34,4 @@ def contacts(request):
     }
 
     return render(request, 'contacts.html', {"contact_info": contact_info})
+
