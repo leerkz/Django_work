@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}
+Контакты
+{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1 class="text-center mb-4">Контакты</h1>
+    <div class="row">
+        <!-- Форма обратной связи -->
+        <div class="col-md-6">
+            <form>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Имя</label>
+                    <input type="text" class="form-control" id="name" placeholder="Введите ваше имя">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Почта</label>
+                    <input type="email" class="form-control" id="email" placeholder="Введите вашу почту">
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Сообщение</label>
+                    <textarea class="form-control" id="message" rows="4" placeholder="Введите ваше сообщение"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Отправить</button>
+            </form>
+        </div>
+
+        <!-- Контактная информация -->
+        <div class="col-md-6">
+            <h2>Наши контакты</h2>
+            <p>Email: {{ contact_info.email }}</p>
+            <p>Телефон: {{ contact_info.phone }}</p>
+            <p>Адрес: {{ contact_info.address }}</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
